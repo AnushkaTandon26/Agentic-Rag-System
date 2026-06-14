@@ -9,6 +9,8 @@ pinned: false
 
 # Enterprise Agentic RAG System
 
+[Open the live application](https://anushka765-agentic-rag-system.hf.space)
+
 This project is a role-aware Agentic Retrieval-Augmented Generation system built for the Enterprise RAG Intelligence Challenge. It searches internal documents, CSV records, and JSON logs while checking whether the requesting user is allowed to access each source.
 
 The answer generation is fully extractive. It does not use the OpenAI API or any other hosted text-generation model.
