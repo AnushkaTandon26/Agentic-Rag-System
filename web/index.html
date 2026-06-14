@@ -92,7 +92,7 @@
         <div class="panel-title"><h3>Run a query</h3><span class="step">INPUT</span></div>
         <label for="user">Acting user</label><select id="user"><option>Loading users...</option></select>
         <label for="question">Enterprise question</label><textarea id="question" placeholder="Ask about policies, reports, projects, or audit logs..."></textarea>
-        <div class="suggestions"><button class="chip" data-question="What is the leave policy for employees?">Leave policy</button><button class="chip" data-question="What was Q1 revenue and budget allocation?">Q1 finance</button><button class="chip" data-question="What are the VPN access security protocols?">VPN security</button><button class="chip" data-question="Give me a summary of all system audit logs">Audit logs</button></div>
+        <div class="suggestions" id="suggestions"></div>
         <button class="ask" id="ask">Run agentic retrieval</button><div class="error" id="error"></div>
       </section>
       <section class="panel">
@@ -109,10 +109,22 @@
     </main>
   </div>
   <script>
-    const userSelect = document.querySelector("#user"), question = document.querySelector("#question"), askButton = document.querySelector("#ask"), errorBox = document.querySelector("#error");
+    const userSelect = document.querySelector("#user"), question = document.querySelector("#question"), askButton = document.querySelector("#ask"), errorBox = document.querySelector("#error"), suggestions = document.querySelector("#suggestions");
     const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"})[char]);
-    async function loadUsers() { const response = await fetch("/api/users"); const data = await response.json(); userSelect.innerHTML = data.users.map(user => `<option value="${escapeHtml(user.user_id)}">${escapeHtml(user.name)} · ${escapeHtml(user.role)} · ${escapeHtml(user.user_id)}</option>`).join(""); }
-    document.querySelectorAll(".chip").forEach(chip => chip.addEventListener("click", () => { question.value = chip.dataset.question; question.focus(); }));
+    const questionsByUser = {
+      U001: [["Leave types", "What types of leave are available to employees?"], ["Submit leave", "How should employees submit leave requests?"], ["Benefits", "Summarize employee benefits and remote-work rules."]],
+      U002: [["Q1 revenue", "What was Q1 revenue and why did it exceed the plan?"], ["Budget risks", "Summarize budget allocation and major financial risks."], ["Spending", "Compare revenue performance and infrastructure spending."]],
+      U003: [["VPN security", "What are the VPN access security requirements?"], ["Privileged access", "Explain the privileged-access approval workflow."], ["Incidents", "What security incidents must employees report?"]],
+      U004: [["Roadmap", "Summarize the product roadmap and planned features."], ["Priorities", "What are the major product-release priorities?"]],
+      U005: [["Audit logs", "Summarize all system audit logs."], ["Compare policies", "Compare the finance report, product roadmap, and security policy."], ["Logs activity", "What activity appears in both system logs and audit trails?"], ["Risks", "Compare the finance report, product roadmap, and security policy, then summarize the major risks and priorities."]],
+      U006: [["Compliance", "Summarize the compliance manual and major requirements."], ["Policy risks", "What are the major compliance and regulatory risks?"]],
+      U007: [["Projects", "Summarize active projects and their current status."], ["Project risks", "Which projects are delayed or at risk?"]],
+      U008: [["Leave policy", "What is the employee leave policy?"], ["RBAC demo", "Show me the financial report details."]]
+    };
+    async function loadUsers() { const response = await fetch("/api/users"); const data = await response.json(); userSelect.innerHTML = data.users.map(user => `<option value="${escapeHtml(user.user_id)}">${escapeHtml(user.name)} · ${escapeHtml(user.role)} · ${escapeHtml(user.user_id)}</option>`).join(""); renderSuggestions(); }
+    function renderSuggestions() { suggestions.innerHTML = (questionsByUser[userSelect.value] || []).map(([label, prompt]) => `<button class="chip" data-question="${escapeHtml(prompt)}">${escapeHtml(label)}</button>`).join(""); }
+    userSelect.addEventListener("change", renderSuggestions);
+    suggestions.addEventListener("click", event => { const chip = event.target.closest(".chip"); if (!chip) return; question.value = chip.dataset.question; question.focus(); });
     askButton.addEventListener("click", runQuery);
     question.addEventListener("keydown", event => { if ((event.ctrlKey || event.metaKey) && event.key === "Enter") runQuery(); });
     async function runQuery() {
