@@ -1,0 +1,21 @@
+emp_id,name,department,role,salary,manager,access_level
+E001,Alice Morgan,HR,hr,86000,Maya Patel,confidential
+E002,Bob Chen,Finance,finance,94000,Iris Novak,restricted
+E003,Carol Singh,IT,it,99000,Noah Brooks,restricted
+E004,Dave Romero,Product,product,102000,Lena Ortiz,confidential
+E005,Eve Johnson,Administration,admin,125000,Board Office,top_secret
+E006,Frank Wilson,Legal,legal,118000,Priya Shah,restricted
+E007,Grace Kim,Engineering,engineering,111000,Omar Diaz,confidential
+E008,Henry Brown,Operations,employee,68000,Maya Patel,internal
+E009,Isabella Rossi,Compliance,compliance,107000,Priya Shah,restricted
+E010,Jack Miller,Security,security,104000,Noah Brooks,restricted
+E011,Karen Davis,HR,hr,79000,Alice Morgan,confidential
+E012,Leo Garcia,Finance,finance,88000,Bob Chen,restricted
+E013,Mina Park,IT,it,97000,Carol Singh,restricted
+E014,Nora Evans,Product,project_lead,109000,Dave Romero,confidential
+E015,Owen Clark,Engineering,engineering,115000,Grace Kim,confidential
+E016,Paula Adams,Legal,legal,112000,Frank Wilson,restricted
+E017,Quinn Reed,Sales,employee,76000,Maya Patel,internal
+E018,Ravi Kumar,Security,security,101000,Jack Miller,restricted
+E019,Sara Lopez,Compliance,compliance,98000,Isabella Rossi,restricted
+E020,Tom Nguyen,Operations,employee,72000,Henry Brown,internal

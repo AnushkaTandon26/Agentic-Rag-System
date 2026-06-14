@@ -1,0 +1,11 @@
+project_id,name,department,budget,status,lead,confidentiality_level
+P001,Apollo Automation,Product,750000,active,Nora Evans,confidential
+P002,Ledger Modernization,Finance,420000,active,Bob Chen,restricted
+P003,Zero Trust VPN,IT,610000,active,Carol Singh,restricted
+P004,People Portal Refresh,HR,280000,planning,Alice Morgan,internal
+P005,Audit Evidence Hub,Compliance,360000,active,Isabella Rossi,restricted
+P006,Contract Intelligence,Legal,330000,planning,Frank Wilson,confidential
+P007,Observability Upgrade,Engineering,540000,active,Grace Kim,confidential
+P008,Customer Mobile Launch,Product,690000,delayed,Dave Romero,confidential
+P009,Security Data Lake,Security,470000,active,Jack Miller,restricted
+P010,Operations Insights,Operations,260000,complete,Henry Brown,internal

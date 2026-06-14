@@ -1,0 +1,162 @@
+[
+  {
+    "timestamp": "2026-01-15T09:00:00",
+    "user": "U001",
+    "department": "HR",
+    "query": "leave balance lookup",
+    "data_accessed": "it_security_policy",
+    "permission_level": "internal"
+  },
+  {
+    "timestamp": "2026-01-15T12:00:00",
+    "user": "U002",
+    "department": "Finance",
+    "query": "quarterly revenue summary",
+    "data_accessed": "projects",
+    "permission_level": "confidential"
+  },
+  {
+    "timestamp": "2026-01-15T15:00:00",
+    "user": "U003",
+    "department": "IT",
+    "query": "vpn exception review",
+    "data_accessed": "system_logs",
+    "permission_level": "restricted"
+  },
+  {
+    "timestamp": "2026-01-15T18:00:00",
+    "user": "U004",
+    "department": "Product",
+    "query": "roadmap dependency search",
+    "data_accessed": "audit_trail",
+    "permission_level": "admin"
+  },
+  {
+    "timestamp": "2026-01-15T21:00:00",
+    "user": "U005",
+    "department": "Admin",
+    "query": "privileged log export",
+    "data_accessed": "hr_policy",
+    "permission_level": "internal"
+  },
+  {
+    "timestamp": "2026-01-16T00:00:00",
+    "user": "U006",
+    "department": "Legal",
+    "query": "leave balance lookup",
+    "data_accessed": "finance_report",
+    "permission_level": "confidential"
+  },
+  {
+    "timestamp": "2026-01-16T03:00:00",
+    "user": "U007",
+    "department": "Engineering",
+    "query": "quarterly revenue summary",
+    "data_accessed": "it_security_policy",
+    "permission_level": "restricted"
+  },
+  {
+    "timestamp": "2026-01-16T06:00:00",
+    "user": "U008",
+    "department": "Operations",
+    "query": "vpn exception review",
+    "data_accessed": "projects",
+    "permission_level": "admin"
+  },
+  {
+    "timestamp": "2026-01-16T09:00:00",
+    "user": "U001",
+    "department": "HR",
+    "query": "roadmap dependency search",
+    "data_accessed": "system_logs",
+    "permission_level": "internal"
+  },
+  {
+    "timestamp": "2026-01-16T12:00:00",
+    "user": "U002",
+    "department": "Finance",
+    "query": "privileged log export",
+    "data_accessed": "audit_trail",
+    "permission_level": "confidential"
+  },
+  {
+    "timestamp": "2026-01-16T15:00:00",
+    "user": "U003",
+    "department": "IT",
+    "query": "leave balance lookup",
+    "data_accessed": "hr_policy",
+    "permission_level": "restricted"
+  },
+  {
+    "timestamp": "2026-01-16T18:00:00",
+    "user": "U004",
+    "department": "Product",
+    "query": "quarterly revenue summary",
+    "data_accessed": "finance_report",
+    "permission_level": "admin"
+  },
+  {
+    "timestamp": "2026-01-16T21:00:00",
+    "user": "U005",
+    "department": "Admin",
+    "query": "vpn exception review",
+    "data_accessed": "it_security_policy",
+    "permission_level": "internal"
+  },
+  {
+    "timestamp": "2026-01-17T00:00:00",
+    "user": "U006",
+    "department": "Legal",
+    "query": "roadmap dependency search",
+    "data_accessed": "projects",
+    "permission_level": "confidential"
+  },
+  {
+    "timestamp": "2026-01-17T03:00:00",
+    "user": "U007",
+    "department": "Engineering",
+    "query": "privileged log export",
+    "data_accessed": "system_logs",
+    "permission_level": "restricted"
+  },
+  {
+    "timestamp": "2026-01-17T06:00:00",
+    "user": "U008",
+    "department": "Operations",
+    "query": "leave balance lookup",
+    "data_accessed": "audit_trail",
+    "permission_level": "admin"
+  },
+  {
+    "timestamp": "2026-01-17T09:00:00",
+    "user": "U001",
+    "department": "HR",
+    "query": "quarterly revenue summary",
+    "data_accessed": "hr_policy",
+    "permission_level": "internal"
+  },
+  {
+    "timestamp": "2026-01-17T12:00:00",
+    "user": "U002",
+    "department": "Finance",
+    "query": "vpn exception review",
+    "data_accessed": "finance_report",
+    "permission_level": "confidential"
+  },
+  {
+    "timestamp": "2026-01-17T15:00:00",
+    "user": "U003",
+    "department": "IT",
+    "query": "roadmap dependency search",
+    "data_accessed": "it_security_policy",
+    "permission_level": "restricted"
+  },
+  {
+    "timestamp": "2026-01-17T18:00:00",
+    "user": "U004",
+    "department": "Product",
+    "query": "privileged log export",
+    "data_accessed": "projects",
+    "permission_level": "admin"
+  }
+]

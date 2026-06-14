@@ -1,0 +1,42 @@
+[
+  {
+    "user_id": "U001",
+    "name": "Alice",
+    "role": "hr"
+  },
+  {
+    "user_id": "U002",
+    "name": "Bob",
+    "role": "finance"
+  },
+  {
+    "user_id": "U003",
+    "name": "Carol",
+    "role": "it"
+  },
+  {
+    "user_id": "U004",
+    "name": "Dave",
+    "role": "product"
+  },
+  {
+    "user_id": "U005",
+    "name": "Eve",
+    "role": "admin"
+  },
+  {
+    "user_id": "U006",
+    "name": "Frank",
+    "role": "legal"
+  },
+  {
+    "user_id": "U007",
+    "name": "Grace",
+    "role": "engineering"
+  },
+  {
+    "user_id": "U008",
+    "name": "Henry",
+    "role": "employee"
+  }
+]

@@ -1,0 +1,7 @@
+langchain
+chromadb
+sentence-transformers
+pandas
+numpy
+rank-bm25
+python-dotenv

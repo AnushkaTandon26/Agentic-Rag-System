@@ -1,0 +1,43 @@
+{
+  "finance_report": [
+    "finance",
+    "admin"
+  ],
+  "hr_policy": [
+    "hr",
+    "admin",
+    "all_employees"
+  ],
+  "it_security_policy": [
+    "it",
+    "admin"
+  ],
+  "product_roadmap": [
+    "product",
+    "admin",
+    "engineering"
+  ],
+  "compliance_manual": [
+    "legal",
+    "admin",
+    "compliance"
+  ],
+  "employees": [
+    "hr",
+    "admin"
+  ],
+  "projects": [
+    "admin",
+    "project_lead"
+  ],
+  "system_logs": [
+    "it",
+    "admin",
+    "security"
+  ],
+  "audit_trail": [
+    "admin",
+    "compliance",
+    "legal"
+  ]
+}
