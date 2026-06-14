@@ -1,3 +1,12 @@
+---
+title: Enterprise Agentic RAG System
+colorFrom: green
+colorTo: gray
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Enterprise Agentic RAG System
 
 This project is a role-aware Agentic Retrieval-Augmented Generation system built for the Enterprise RAG Intelligence Challenge. It searches internal documents, CSV records, and JSON logs while checking whether the requesting user is allowed to access each source.
@@ -87,6 +96,16 @@ python web_app.py
 Wait until the terminal prints that the frontend is ready, then open `http://127.0.0.1:8000` in your browser. The interface lets you select an enterprise user, ask custom questions, inspect citations and metrics, and see the agent workflow and RBAC decisions.
 
 Stop the server with `Ctrl+C`.
+
+## Deploy on Hugging Face Spaces
+
+This repository is configured for a free Hugging Face Docker Space.
+
+1. Create a new public Space and select **Docker** as the SDK.
+2. Use **CPU Basic** hardware.
+3. Upload or push this repository to the Space.
+
+The Space builds the included `Dockerfile` and serves the application on port `7860`. No environment variables are required. Free Space storage is temporary, so generated RBAC audit entries can reset when the Space restarts.
 
 ## Run tests
 

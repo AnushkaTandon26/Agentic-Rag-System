@@ -42,6 +42,9 @@ class RAGRequestHandler(BaseHTTPRequestHandler):
     app: RAGApplication
 
     def do_GET(self) -> None:
+        if self.path == "/api/health":
+            self._send_json({"status": "ok"})
+            return
         if self.path == "/api/users":
             self._send_json({"users": self.app.users()})
             return
